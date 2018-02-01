@@ -5,9 +5,9 @@ const CardExampleCardProps = () => (
   <Card.Group>
   <Card
     
-    header='Rashon Hodge'
+    header='Rashan Hodge'
     
-    description='Protects networks from intrusion and could possibly stop collusion.'
+    description='Protects networks from intrusion and is one password vault away from a tinfoil hat.'
    />
 
     <Card
