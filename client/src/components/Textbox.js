@@ -5,7 +5,7 @@ import '../App.css';
 export const Textbox = props =>
   <Form>
     <Form.Group widths='equal'>
-      <Form.Field id='form-input-control-phone-number' control={Input} label='Phone number' placeholder='Phone number' />
+      <Form.Field id='form-input-control-phone-number' control={Input} label='Message Recipient' placeholder='Message Recipient' />
 
     </Form.Group>
     <Form.Field id='form-textarea-control-message' control={TextArea} label='Message' placeholder='Enter your message' />

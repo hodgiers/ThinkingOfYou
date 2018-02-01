@@ -79,7 +79,7 @@ class Sends extends Component {
                                 placeholder= 'Message'
                     />
                     </Form.Group>
-                    <Form.Field id='form-button-control-public' control={Button} content='Send message' disabled={!(this.state.phone && this.state.message)}
+                    <Form.Field id='form-button-control-public' control={Button} content='Send Message' disabled={!(this.state.phone && this.state.message)}
                                 onClick={this.handleFormSubmit} />
                 </Form>
 
