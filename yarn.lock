@@ -899,8 +899,8 @@ generate-function@^2.0.0:
   resolved "https://registry.yarnpkg.com/generate-function/-/generate-function-2.0.0.tgz#6858fe7c0969b7d4e9093337647ac79f60dfbe74"
 
 generic-pool@^3.1.8:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/generic-pool/-/generic-pool-3.4.0.tgz#6b76fc201bb49a0ff381450f585352378fb1c08f"
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/generic-pool/-/generic-pool-3.4.1.tgz#54103118d0cb279f77de7a0cc53396e6d0c12781"
 
 get-stream@^3.0.0:
   version "3.0.0"
@@ -1539,7 +1539,13 @@ mqtt-packet@^5.4.0:
     process-nextick-args "^1.0.7"
     safe-buffer "^5.1.0"
 
-mqtt@^2.15.1:
+mqtt-react@0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/mqtt-react/-/mqtt-react-0.0.3.tgz#f6ebb2aa17fb6958889f6acf3b1897320efa4f71"
+  dependencies:
+    mqtt "^2.8.0"
+
+mqtt@^2.15.1, mqtt@^2.8.0:
   version "2.15.1"
   resolved "https://registry.yarnpkg.com/mqtt/-/mqtt-2.15.1.tgz#86fc34e387495df60cd0ccb75cd97743344a4b28"
   dependencies:
@@ -1643,8 +1649,8 @@ node-pre-gyp@^0.6.39:
     tar-pack "^3.4.0"
 
 nodemon@^1.11.0:
-  version "1.14.11"
-  resolved "https://registry.yarnpkg.com/nodemon/-/nodemon-1.14.11.tgz#cc0009dd8d82f126f3aba50ace7e753827a8cebc"
+  version "1.14.12"
+  resolved "https://registry.yarnpkg.com/nodemon/-/nodemon-1.14.12.tgz#fe059424b15ebdb107696287a558d9cf53a63999"
   dependencies:
     chokidar "^2.0.0"
     debug "^3.1.0"
