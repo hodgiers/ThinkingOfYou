@@ -45,6 +45,7 @@ class Sends extends Component {
         event.preventDefault();
         console.log(this.state.username);
         if (this.state.phone && this.state.message) {
+            console.log("got this far");
             API.updateToy({
                 username: this.state.username,
                 phone: this.state.phone,
@@ -52,12 +53,24 @@ class Sends extends Component {
             })
                 .then(res => console.log(res))
                 .catch(err => console.log(err));
+            alert("Your message was Sent");
         }
+        
     };
 
     render() {
         return (
-            <div>
+            <div className='backgroundImage'>
+                
+                <div className="sendcontainer">
+                
+                <p>Put in your special person's phone number 
+                and write them a note.</p> <p>Thinking-of-You will 
+                send your love over the wires and activate the heart</p>
+                <p>letting them know you are thinking of them.</p>
+
+                </div>
+                <br/>
                 <Form>
                     <Form.Group widths='equal'>
                     <Form.Field id="form-input-control-phone-number"
@@ -83,7 +96,7 @@ class Sends extends Component {
                                 onClick={this.handleFormSubmit} />
                 </Form>
 
-
+                
             </div>
         );
     }

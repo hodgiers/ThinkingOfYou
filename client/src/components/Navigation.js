@@ -13,7 +13,7 @@ export default class MenuExampleBasic extends Component {
     const { activeItem } = this.state
 
     return (
-      <Menu className='menu' size='huge'>
+      <Menu  className='menu' size='massive'>
         <Menu.Item
           name='home'
           active={activeItem === 'home'}

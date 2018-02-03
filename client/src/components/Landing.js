@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 import '../App.css';
 
 const LoginForm = () => (
@@ -23,7 +24,7 @@ const LoginForm = () => (
     >
       <Grid.Column>
         <Header as='h2' color='red' textAlign='center'>
-          <Image src='./heart.ico' />
+          
           <p>Log-in to your account</p>
         </Header>
         <Form size='large'>
@@ -42,7 +43,7 @@ const LoginForm = () => (
               type='password'
             />
 
-            <Button color='red' fluid size='large'><p>Login</p></Button>
+            <Button color='red' fluid size='large'><a href='/send'></a><p>Login</p></Button>
           </Segment>
         </Form>
         <Message id='order'>

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { Form, Input, TextArea, Button } from 'semantic-ui-react';
+import { Form, Input, TextArea, Button, Container } from 'semantic-ui-react';
 import Navigation from '../components/Navigation.js';
 import Checkout from '../components/Checkout.js';
 import API from "../utils/API";
-
+import '../App.css';
 
 class Order extends Component {
 
@@ -51,14 +51,21 @@ class Order extends Component {
             })
                 .then(res => console.log(res))
                 .catch(err => console.log(err));
+            window.location =  './send';
         }
     };
 
     render() {
         return (
-            <div>
+            <div className='backgroundImage'>
+            
+            <Container text className="ordercontainer">
+            <p>Order your kit today!</p> 
+            <p>Your kit will include a Raspberry Pi, a heart, and instructions.</p>
+            <br/>
+            </Container>
                 <Form>
-                    <Form.Field>
+                    <Form.Field className='formcontainer'>
                         <label>First Name</label>
                         <input placeholder='First Name'
                                control={Input}
@@ -100,18 +107,18 @@ class Order extends Component {
                     </Form.Field>
                     <Form.Field>
                         <label>Zip</label>
-                        <input placeholder='Zip'
+                        <input type='number' placeholder='Zip'
                                control={Input}
                                value={this.state.zip}
                                onChange={this.handleInputChange}
-                               name="zip"/>p
+                               name="zip"/>
                     </Form.Field>
                     <Form.Field>
                         <label>Credit Card Number</label>
-                        <input placeholder='Credit Card Number'
+                        <input type='number' placeholder='Credit Card Number'
                                control={Input}
                                value={this.state.creditcard}
-                               onChange={this.handleInputChange}
+                               onCtype='number' hange={this.handleInputChange}
                                name="creditcard"/>
                     </Form.Field>
                     <Form.Field>
@@ -124,7 +131,7 @@ class Order extends Component {
                     </Form.Field>
                     <Form.Field>
                         <label>Email Address</label>
-                        <input placeholder='Email address'
+                        <input type='email' placeholder='Email address'
                                control={Input}
                                value={this.state.email}
                                onChange={this.handleInputChange}
@@ -135,23 +142,9 @@ class Order extends Component {
                     <Button type='submit' control={Button}  disabled={!(this.state.email && this.state.lastName)}
                             onClick={this.handleFormSubmit}>Submit</Button>
                 </Form>
-                )
+                
 
-                <h1>Faq</h1>
-                <p>
-                    Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-                    molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-                    magna a ultrices. Aenean pellentesque placerat lacus imperdiet efficitur.
-                    In felis nisl, luctus non ante euismod, tincidunt bibendum mi. In a
-                    molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna posuere,
-                    eget tristique dui dapibus. Maecenas fermentum elementum faucibus. Quisque
-                    nec metus vestibulum, egestas massa eu, sollicitudin ipsum. Nulla
-                    facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh dictum
-                    ullamcorper. Class aptent taciti sociosqu ad litora torquent per conubia
-                    nostra, per inceptos himenaeos. Etiam ornare rutrum felis at rhoncus.
-                    Etiam vel condimentum magna, quis tempor nulla.
-                </p>
-
+                
             </div>
     );
 
